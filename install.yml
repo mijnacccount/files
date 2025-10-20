@@ -1,0 +1,21 @@
+autoinstall:
+  version: 1
+  identity:
+    realname: 'test'
+    hostname: test
+    password: 'Pa$$word'
+    hostname: ubuntu-server
+  interactive-sections:
+    - network
+  storage:
+    layout:
+      name: lvm
+  timezone: "Europe/London"
+  ssh:
+    install-server: true
+    authorized-keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBfv6mqsi6JJYNgConO28oegRcI9h/LFJEZDYg9LaDqZ test@ubuntu-server
+    allow-pw: false
+  updates: all
+  packages:
+    - vim

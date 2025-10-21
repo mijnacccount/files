@@ -6,11 +6,14 @@ autoinstall:
     username: test
     password: "$6$6d44fRh0$gWZc3Gc0It6DsVExlh9v4aDveAnpb3K1Y2uU0oG51UBh0l4UzvQNsVRLgxgVJZ9MZREtCn3GbGo2Pne4mH1J71"  # hashed 'Pa$$word'
     hostname: ubuntu-server
-  interactive-sections:
-    - network
+  # Uncomment to make network configuration interactive
+  # interactive-sections:
+  #   - network
   storage:
     layout:
       name: lvm
+      match:
+        size: largest
   timezone: "Europe/London"
   ssh:
     install-server: true
